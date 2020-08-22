@@ -1,7 +1,7 @@
 //creates tutorials table in MySQL database
 module.exports = (sequelize, Sequelize) => {
-    const Tutorial = sequelize.define("tutorial", {
-      title: {
+    const dieSet = sequelize.define("dieSet", {
+      name: {
         type: Sequelize.STRING
       },
       description: {
@@ -9,6 +9,9 @@ module.exports = (sequelize, Sequelize) => {
       },
       published: {
         type: Sequelize.BOOLEAN
+      },
+      includedDice: {
+        type: Sequelize.STRING
       }
     });
   

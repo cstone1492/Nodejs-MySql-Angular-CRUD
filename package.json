@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-express-squelize-mysql",
+  "name": "die-setnodejs-express-squelize-mysql",
   "version": "1.0.0",
-  "description": "NOde.js Rest Apis with Express, Sequelize, & MySQL",
+  "description": "Node.js Rest Apis with Express, Sequelize, & MySQL",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
