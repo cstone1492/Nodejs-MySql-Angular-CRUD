@@ -1,29 +1,29 @@
 module.exports = app => {
-    const tutorials = require("../controllers/dieSet.controller.js");
+    const dieSets = require("../controllers/dieSet.controller.js");
   
     var router = require("express").Router();
   
-    // Create a new Tutorial
-    router.post("/", tutorials.create);
+    // Create a new dieSet
+    router.post("/", dieSets.create);
   
-    // Retrieve all Tutorials
-    router.get("/", tutorials.findAll);
+    // Retrieve all dieSets
+    router.get("/", dieSets.findAll);
   
-    // Retrieve all published Tutorials
-    router.get("/published", tutorials.findAllPublished);
+    // Retrieve all published dieSets
+    router.get("/published", dieSets.findAllPublished);
   
-    // Retrieve a single Tutorial with id
-    router.get("/:id", tutorials.findOne);
+    // Retrieve a single dieSet with id
+    router.get("/:id", dieSets.findOne);
   
-    // Update a Tutorial with id
-    router.put("/:id", tutorials.update);
+    // Update a dieSet with id
+    router.put("/:id", dieSets.update);
   
-    // Delete a Tutorial with id
-    router.delete("/:id", tutorials.delete);
+    // Delete a dieSet with id
+    router.delete("/:id", dieSets.delete);
   
-    // Delete all Tutorials
-    router.delete("/", tutorials.deleteAll);
+    // Delete all dieSets
+    router.delete("/", dieSets.deleteAll);
   
-    app.use('/api/tutorials', router);
+    app.use('/api/dieSets', router);
   };
 
