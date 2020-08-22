@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-const db = require("./app/models");
+const db = require("./server/models");
 db.sequelize.sync();
 // drop the table if it already exists
  db.sequelize.sync({ force: true }).then(() => {
@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Caroline's application." });
 });
 
-require("./app/routes/tutorial.routes")(app);
+require("./server/routes/tutorial.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
